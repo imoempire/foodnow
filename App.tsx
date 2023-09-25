@@ -6,7 +6,10 @@ import { IoElementsProvider } from "io-elements";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { useCallback } from "react";
-import { KeyboardAvoiderScrollView } from '@good-react-native/keyboard-avoider';
+import {
+  KeyboardAvoiderProvider,
+  KeyboardAvoiderScrollView,
+} from "@good-react-native/keyboard-avoider";
 
 import {
   Raleway_300Light,
@@ -14,6 +17,8 @@ import {
   Raleway_500Medium,
   Raleway_700Bold,
 } from "@expo-google-fonts/raleway";
+import MyStack from "./src/Components/Routes/Router";
+import { NavigationContainer } from "@react-navigation/native";
 
 const statusBar = Constants.statusBarHeight;
 SplashScreen.preventAutoHideAsync();
@@ -38,12 +43,14 @@ export default function App() {
 
   return (
     <KeyboardAvoiderProvider>
-      <IoElementsProvider style={styles.container}>
-        <StatusBar style="auto" />
-        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-          <SignUp />
+      {/* <IoElementsProvider style={styles.container} > */}
+        <View style={{flex: 1}} onLayout={onLayoutRootView}>
+          <StatusBar style="auto" />
+          <NavigationContainer>
+            <MyStack />
+          </NavigationContainer>
         </View>
-      </IoElementsProvider>
+      {/* </IoElementsProvider> */}
     </KeyboardAvoiderProvider>
   );
 }
@@ -53,6 +60,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     paddingTop: statusBar,
-    paddingHorizontal: 10,
   },
 });

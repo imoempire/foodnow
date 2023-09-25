@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { bgColor } from "../../Constants/Colors";
 
 interface Props {
-  name: undefined | string;
+  name: any | string;
   color: string;
   size: number;
 }

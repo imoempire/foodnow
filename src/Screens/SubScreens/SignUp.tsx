@@ -13,6 +13,7 @@ import { designColors } from "../../Constants/Colors";
 import DesignText from "../../Components/Text";
 import { Input, PhoneInput } from "io-elements";
 import LongBtn from "../../Components/Touchables/LongBtn";
+import { KeyboardAvoiderScrollView } from "@good-react-native/keyboard-avoider";
 
 const SignUp = () => {
   let inputSize = 60;
@@ -60,7 +61,7 @@ const SignUp = () => {
             height: inputSize,
           }}
           InputborderStyle={{
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: "#525252",
             borderRadius: 10,
           }}
@@ -75,7 +76,7 @@ const SignUp = () => {
             height: inputSize,
           }}
           InputborderStyle={{
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: "#525252",
             borderRadius: 10,
           }}
@@ -86,10 +87,10 @@ const SignUp = () => {
             marginVertical: 10,
           }}
           color="#ffffff"
-          codeButtonStyles={{ borderWidth: 1, borderColor: "#525252" }}
+          codeButtonStyles={{ borderWidth: 2, borderColor: "#525252" }}
           InputStyles={{
             borderColor: "#525252",
-            borderWidth: 1,
+            borderWidth: 2,
           }}
           height={inputSize}
           codeColor={designColors.black}
@@ -103,7 +104,7 @@ const SignUp = () => {
             height: inputSize,
           }}
           InputborderStyle={{
-            borderWidth: 1,
+            borderWidth: 2,
             borderColor: "#525252",
             borderRadius: 10,
           }}

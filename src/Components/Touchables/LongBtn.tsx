@@ -14,6 +14,7 @@ const LongBtn = ({ title }: Props) => {
       buttonStyle={{ height: 58 }}
       radius={10}
       buttonColor={bgColor.primary}
+      onPress={() => {}}
     >
       <DesignText
         children={title}
